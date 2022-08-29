@@ -432,7 +432,12 @@ body {
         text-align: left;
     }
     .landing-page .header-area .links li {
-        width: 150px;
+        width: 30%;
+        margin: 5px 20px 15px;
+        border-bottom: 1px solid #ccc;
+    }
+    .landing-page .header-area .links li:hover {
+        background-color: #eee;
     }
     .landing-page .header-area .links li a.active {
         color: var(--main-color);
