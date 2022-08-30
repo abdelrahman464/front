@@ -128,27 +128,40 @@
    //select skills selector
    let ourSkills = document.querySelector(".skills");
 
+
+
+   //*******************start old way ********************* */
+   //    window.onscroll = function() {
+   //        //skills offset top 
+   //        let skillsOffsetTop = ourSkills.offsetTop;
+   //        //skills puter height
+   //        let skillsOuterHeight = ourSkills.offsetHeight;
+   //        //window height
+   //        let windowHeight = this.innerHeight;
+   //        //window scroll top
+   //        let windowScrollTop = this.pageYOffset;
+
+   //        if (windowScrollTop > (skillsOffsetTop + skillsOuterHeight - windowHeight)) {
+
+   //            //get all skills 
+   //            let allSkills = document.querySelectorAll(".skill-box .skill-progress span");
+   //            allSkills.forEach(skill => {
+   //                skill.style.width = skill.dataset.progress;
+   //            });
+
+   //        }
+
+
+   //    }
+   //******************* end old way ********************* */
    window.onscroll = function() {
-       //skills offset top 
-       let skillsOffsetTop = ourSkills.offsetTop;
-       //skills puter height
-       let skillsOuterHeight = ourSkills.offsetHeight;
-       //window height
-       let windowHeight = this.innerHeight;
-       //window scroll top
-       let windowScrollTop = this.pageYOffset;
-
-       if (windowScrollTop > (skillsOffsetTop + skillsOuterHeight - windowHeight)) {
-
+       if (window.scrollY >= ourSkills.offsetTop - 350) {
            //get all skills 
            let allSkills = document.querySelectorAll(".skill-box .skill-progress span");
            allSkills.forEach(skill => {
                skill.style.width = skill.dataset.progress;
            });
-
        }
-
-
    }
 
    //********************************** end skill******************************************
@@ -379,7 +392,7 @@
 
    //select toogle menu
    let toggleMenu = document.querySelector(".header-area .toggle-menu");
-   let headerlinks = document.querySelector(" .header-area .links");
+   let headerlinks = document.querySelector(".header-area .links");
 
 
    //when i click on toggle menu

@@ -1,5 +1,5 @@
 :root {
-    --main-color:#e91e63;
+    --main-color: #e91e63;
     --main-transition: 0.3s;
     --section-padding: 50px;
 }
@@ -432,12 +432,15 @@ body {
         text-align: left;
     }
     .landing-page .header-area .links li {
-        width: 30%;
+        width: 40%;
         margin: 5px 20px 15px;
         border-bottom: 1px solid #ccc;
     }
     .landing-page .header-area .links li:hover {
         background-color: #eee;
+    }
+    .landing-page .header-area .links li a {
+        padding-top: 30px;
     }
     .landing-page .header-area .links li a.active {
         color: var(--main-color);
@@ -652,6 +655,7 @@ body {
 .gallery {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
+    transition: var(--main-transition);
 }
 
 .gallery h2 {
@@ -680,7 +684,7 @@ body {
 
 .popup-overlaygallery {
     position: fixed;
-    background-color: rgb(0 0 0 /0.7);
+    background-color: rgb(0 0 0 /0.75);
     left: 0;
     top: 0;
     width: 100%;
@@ -698,11 +702,7 @@ body {
     padding: 20px;
     z-index: 1003;
 }
-@media(max-width:991px) {
-    .popup-box {
-        width: 75%;
-    }
-}
+
 .popup-box h3 {
     text-align: center;
     font-weight: bold;
@@ -715,6 +715,12 @@ body {
     max-width: 100%;
     max-height: 80vh;
     padding: 20px;
+}
+
+@media(max-width:991px) {
+    .popup-box {
+        width: 75%;
+    }
 }
 
 .popup-box .close-btn {
