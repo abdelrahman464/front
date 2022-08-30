@@ -698,7 +698,11 @@ body {
     padding: 20px;
     z-index: 1003;
 }
-
+@media(max-width:991px) {
+    .popup-box {
+        width: 75%;
+    }
+}
 .popup-box h3 {
     text-align: center;
     font-weight: bold;
